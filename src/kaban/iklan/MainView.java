@@ -11,33 +11,39 @@ import java.text.DecimalFormat;
 
 public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
-    private static final String TAG = MainView.class.getSimpleName();
+    private static final String TAG = MainView.class.getName();
     private GameInfo gameInfo;
     private DecimalFormat decimalFormat = new DecimalFormat("0.##");
 
     private Velocity velocity;
     private Ball ball;
+    private Rect canvasRect;
 
     private EngineThread engine;
 
     public MainView(Context context) {
         super(context);
         getHolder().addCallback(this);
-        setFocusable(true);
+
         // create the game loop thread
         gameInfo = new GameInfo();
         engine = new EngineThread(getHolder(), gameInfo, this);
         ball = new Ball(BitmapFactory.decodeResource(getResources(), R.drawable.ball));
         velocity = new Velocity();
+
+        setFocusable(true);
     }
 
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
+       canvasRect = new Rect(0,0, width, height);
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
+
+        velocity.setDir(85);
+        velocity.setSpeed(24);
         engine.startLoop();
     }
 
@@ -62,8 +68,9 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
     protected void update() {
 
-       velocity.setDir(60);
-       velocity.setSpeed(2);
+       if(!canvasRect.contains(ball.getBounds())) {
+         velocity.reverse();
+       }
        ball.updatePos(velocity);
     }
 
@@ -81,8 +88,9 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
         // draw info bar
         paint.setColor(Color.BLACK);
         paint.setTextSize(20);
-        canvas.drawText("Frame: " + gameInfo.frameCount +
-                        " FPS: "  + decimalFormat.format(gameInfo.averageFps) +
-                        " skipped: " + gameInfo.framesSkipped, 10, 30, paint);
+        canvas.drawText("Angle: " + velocity.getAngle() +
+                        " Frame: " + gameInfo.getTotalFrames() +
+                        " FPS: "  + decimalFormat.format(gameInfo.getAverageFps()) +
+                        " Skipped: " + gameInfo.getAvgFramesSkipped(), 10, 30, paint);
     }
 }

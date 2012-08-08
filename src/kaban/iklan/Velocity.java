@@ -9,10 +9,12 @@ public class Velocity {
     private int velY;
 
     public int getVelX(){
-       return velY;
+       return velX;
     }
 
-
+    public int getAngle() {
+        return angle;
+    }
 
     public int getVelY(){
        return velY;
@@ -21,6 +23,10 @@ public class Velocity {
     public void setDir(int degrees) {
         this.angle = degrees;
         update();
+    }
+
+    public void reverse(){
+        setDir(360 - angle);
     }
 
     public void setSpeed(int unitsPerUpdate) {

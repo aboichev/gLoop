@@ -9,7 +9,7 @@ import android.view.WindowManager;
 public class MainActivity extends Activity
 {
 
-    private static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getName();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
