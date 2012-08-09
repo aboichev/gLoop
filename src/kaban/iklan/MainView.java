@@ -42,8 +42,11 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
-        velocity.setDir(85);
+        velocity.setDir(290);
         velocity.setSpeed(24);
+        ball.setX(400);
+        ball.setY(400);
+
         engine.startLoop();
     }
 
@@ -68,10 +71,26 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
     protected void update() {
 
-       if(!canvasRect.contains(ball.getBounds())) {
-         velocity.reverse();
-       }
-       ball.updatePos(velocity);
+        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top) ||
+                !canvasRect.contains(ball.getBounds().right, ball.getBounds().top)) {
+            velocity.reverseY();
+        }
+
+        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom) ||
+                !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
+            velocity.reverseY();
+        }
+
+        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top)  &&
+            !canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom)) {
+            velocity.reverseX();
+        }
+        if(!canvasRect.contains(ball.getBounds().right, ball.getBounds().top)  &&
+                !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
+            velocity.reverseX();
+        }
+
+        ball.updatePos(velocity);
     }
 
     private Paint paint = new Paint();

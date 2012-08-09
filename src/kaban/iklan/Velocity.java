@@ -25,8 +25,12 @@ public class Velocity {
         update();
     }
 
-    public void reverse(){
-        setDir(360 - angle);
+    public void reverseX(){
+        velX = -velX;
+    }
+
+    public void reverseY(){
+        velY = -velY;
     }
 
     public void setSpeed(int unitsPerUpdate) {
@@ -35,7 +39,7 @@ public class Velocity {
     }
 
     private void update() {
-        velX = (int) (speed * Math.sin(Math.toRadians(angle)));
-        velY = (int) (speed * Math.cos(Math.toRadians(angle)));
+        velX = -(int) (speed * Math.cos(Math.toRadians(angle)));
+        velY = (int) (speed * Math.sin(Math.toRadians(angle)));
     }
 }

@@ -18,18 +18,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dbbdbf-17ed-4fa2-8c09-200c8bd053e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/classes.dex" afterPath="$PROJECT_DIR$/out/production/gLoop/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.res" afterPath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.res" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.unaligned" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk" afterPath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/EngineThread.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/EngineThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/GameInfo.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/GameInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainActivity.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainView.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Velocity.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Velocity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/kaban/iklan/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/kaban/iklan/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/GameInfo.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/GameInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/MainView.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/MainView.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" />
     </list>
     <ignored path="gLoop.iws" />
@@ -88,10 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainView.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MainView.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="68" column="76" selection-start="1930" selection-end="1930" vertical-scroll-proportion="0.0">
+            <state line="44" column="34" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.16044776">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -102,7 +92,7 @@
       <file leaf-file-name="Ball.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="24" column="18" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0">
+            <state line="45" column="18" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -111,7 +101,7 @@
       <file leaf-file-name="Velocity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Velocity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="41" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0">
+            <state line="30" column="25" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -126,10 +116,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameInfo.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GameInfo.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/GameInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="85" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.3880597">
+            <state line="67" column="85" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -164,9 +154,9 @@
         <option value="$PROJECT_DIR$/src/kaban/iklan/MainActivity.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" />
-        <option value="$PROJECT_DIR$/src/kaban/iklan/MainView.java" />
-        <option value="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/GameInfo.java" />
+        <option value="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" />
+        <option value="$PROJECT_DIR$/src/kaban/iklan/MainView.java" />
       </list>
     </option>
   </component>
@@ -271,10 +261,9 @@
     <property name="recentsLimit" value="5" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="5aa8534c" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="emulator-5554" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_AVD" value="Note" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -481,6 +470,11 @@
       <created>1342621284749</created>
       <updated>1342621284749</updated>
     </task>
+    <task id="LOCAL-00001" summary="divide by zero bug fixed">
+      <created>1344480849394</created>
+      <updated>1344480849394</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -568,7 +562,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Some refactoring and collision detection added." />
+    <option name="LAST_COMMIT_MESSAGE" value="divide by zero bug fixed" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -582,6 +576,7 @@
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Some refactoring and collision detection added." />
+    <MESSAGE value="divide by zero bug fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -591,11 +586,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="67" selection-start="499" selection-end="499" vertical-scroll-proportion="0.36956522" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/res/drawable-mdpi/ball.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -641,14 +631,23 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2346369" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
+    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="18" selection-start="386" selection-end="386" vertical-scroll-proportion="0.0" />
+        <state line="11" column="63" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/GameInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="85" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Velocity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="41" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" />
+        <state line="30" column="25" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kaban/iklan/EngineThread.java">
@@ -656,24 +655,26 @@
         <state line="104" column="38" selection-start="3093" selection-end="3093" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="63" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" />
+        <state line="45" column="18" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Android/android-sdk/platforms/android-10/android.jar!/android/graphics/Rect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="53" selection-start="477" selection-end="477" vertical-scroll-proportion="0.41231343">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kaban/iklan/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="76" selection-start="1930" selection-end="1930" vertical-scroll-proportion="0.0">
+        <state line="44" column="34" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.16044776">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/GameInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="85" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.3880597">
-          <folding />
         </state>
       </provider>
     </entry>
