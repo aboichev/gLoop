@@ -83,8 +83,9 @@ class GameInfo {
 
             statusIntervalTimer = System.currentTimeMillis();
             lastStatusStore = statusIntervalTimer;
-
-            avgFramesSkipped = (int) totalFrameCount / totalFramesSkipped;
+            if( totalFramesSkipped > 0) {
+                avgFramesSkipped = (int) totalFrameCount / totalFramesSkipped;
+            }
         }
     }
 }

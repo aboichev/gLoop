@@ -35,7 +35,7 @@ public class Velocity {
     }
 
     private void update() {
-        velX = (int) (speed * Math.cos(Math.toRadians(angle)));
-        velY = (int) (speed * Math.sin(Math.toRadians(angle)));
+        velX = (int) (speed * Math.sin(Math.toRadians(angle)));
+        velY = (int) (speed * Math.cos(Math.toRadians(angle)));
     }
 }
