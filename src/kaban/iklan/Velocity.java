@@ -3,7 +3,7 @@ package kaban.iklan;
 public class Velocity {
 
     private int angle;
-    private int speed;
+    private float speed;
 
     private int velX;
     private int velY;
@@ -33,8 +33,8 @@ public class Velocity {
         velY = -velY;
     }
 
-    public void setSpeed(int unitsPerUpdate) {
-        this.speed = unitsPerUpdate;
+    public void setSpeed(float speedMultiplier) {
+        this.speed = speedMultiplier;
         update();
     }
 

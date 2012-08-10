@@ -43,11 +43,11 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
     public void surfaceCreated(SurfaceHolder holder) {
 
         velocity.setDir(290);
-        velocity.setSpeed(24);
+        velocity.setSpeed(1.2f);
         ball.setX(400);
         ball.setY(400);
 
-        engine.startLoop();
+        engine.start();
     }
 
     @Override
@@ -63,20 +63,27 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
                 engine.stopLoop();
                 ((Activity)getContext()).finish();
             } else {
+                if(engine.isLoopRunning()) {
+                    engine.pauseLoop();
+                }
+                else {
+                    engine.resumeLoop();
+                }
+
                 Log.d(TAG, "Coords: x=" + event.getX() + ",y=" + event.getY());
             }
         }
         return super.onTouchEvent(event);
     }
 
-    protected void update() {
+    protected void update(long time) {
 
-        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top) ||
+        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top) &&
                 !canvasRect.contains(ball.getBounds().right, ball.getBounds().top)) {
             velocity.reverseY();
         }
 
-        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom) ||
+        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom) &&
                 !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
             velocity.reverseY();
         }
@@ -90,7 +97,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
             velocity.reverseX();
         }
 
-        ball.updatePos(velocity);
+        ball.updatePos(velocity, time);
     }
 
     private Paint paint = new Paint();

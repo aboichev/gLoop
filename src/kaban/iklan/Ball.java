@@ -34,10 +34,13 @@ public class Ball {
         this.y = yPox;
     }
 
-    public void updatePos(Velocity velocity) {
-        this.x += velocity.getVelX();
-        this.y += velocity.getVelY();
+    public void updatePos(Velocity velocity, long time) {
+
+        this.x += velocity.getVelX() * time;
+        this.y += velocity.getVelY() * time;
+
     }
+
 
     public void draw(Canvas canvas) {
         canvas.drawBitmap( ball, x, y, null);

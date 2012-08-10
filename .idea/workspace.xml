@@ -18,7 +18,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dbbdbf-17ed-4fa2-8c09-200c8bd053e0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="C:\source\gLoop\out\production\gLoop\kaban\iklan\EngineThread.class" afterPath="C:\source\gLoop\out\production\gLoop\kaban\iklan\EngineThread.class" />
+      <change type="MODIFICATION" beforePath="C:\source\gLoop\out\production\gLoop\kaban\iklan\MainView.class" afterPath="C:\source\gLoop\out\production\gLoop\kaban\iklan\MainView.class" />
+      <change type="MODIFICATION" beforePath="C:\source\gLoop\out\production\gLoop\kaban\iklan\Velocity.class" afterPath="C:\source\gLoop\out\production\gLoop\kaban\iklan\Velocity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/kaban/iklan/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/kaban/iklan/BuildConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/Ball.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/Ball.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/MainView.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/MainView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" />
     </list>
     <ignored path="gLoop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -76,13 +84,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainView.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MainView.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/MainView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="34" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.16044776">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="46" column="27" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -90,16 +96,16 @@
       <file leaf-file-name="Ball.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="18" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
+            <state line="38" column="34" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Velocity.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Velocity.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Velocity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="25" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
+            <state line="37" column="18" selection-start="616" selection-end="616" vertical-scroll-proportion="0.42092457">
               <folding />
             </state>
           </provider>
@@ -108,7 +114,7 @@
       <file leaf-file-name="EngineThread.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/EngineThread.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="104" column="38" selection-start="3093" selection-end="3093" vertical-scroll-proportion="0.0">
+            <state line="136" column="31" selection-start="4128" selection-end="4128" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -148,13 +154,13 @@
         <option value="$PROJECT_DIR$/src/kaban/iklan/Engine.java" />
         <option value="$PROJECT_DIR$/res/drawable-mdpi/ball.xml" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/GameEntity.java" />
-        <option value="$PROJECT_DIR$/src/kaban/iklan/Ball.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/MainActivity.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/GameInfo.java" />
+        <option value="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/MainView.java" />
+        <option value="$PROJECT_DIR$/src/kaban/iklan/Ball.java" />
       </list>
     </option>
   </component>
@@ -190,6 +196,20 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gLoop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="gLoop" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -230,20 +250,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gLoop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gLoop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -425,7 +431,7 @@
       <option name="PREFERRED_AVD" value="" />
       <option name="COMMAND_LINE" value="" />
       <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="true" />
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="true" />
@@ -476,7 +482,11 @@
       <created>1344483160970</created>
       <updated>1344483160970</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added wall collisions logic">
+      <created>1344483264607</created>
+      <updated>1344483264607</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -501,13 +511,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39835164" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22664835" sideWeight="0.49748382" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39835164" sideWeight="0.4946082" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39835164" sideWeight="0.5003595" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21262887" sideWeight="0.33333334" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3282967" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -516,8 +526,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21262887" sideWeight="0.3264463" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21279655" sideWeight="0.77335167" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22664835" sideWeight="0.49748382" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21279655" sideWeight="0.60164833" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22664835" sideWeight="0.48885694" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -634,50 +644,46 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.2346369" />
       </provider>
     </entry>
+    <entry file="jar://C:/Android/android-sdk/platforms/android-10/android.jar!/android/graphics/Rect.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="53" selection-start="477" selection-end="477" vertical-scroll-proportion="0.41231343" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/GameInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="67" column="85" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/kaban/iklan/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="11" column="63" selection-start="275" selection-end="275" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/GameInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="85" selection-start="2103" selection-end="2103" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Velocity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="25" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/kaban/iklan/EngineThread.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="104" column="38" selection-start="3093" selection-end="3093" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="18" selection-start="826" selection-end="826" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Android/android-sdk/platforms/android-10/android.jar!/android/graphics/Rect.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="53" selection-start="477" selection-end="477" vertical-scroll-proportion="0.41231343">
+        <state line="136" column="31" selection-start="4128" selection-end="4128" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kaban/iklan/MainView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="34" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.16044776">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="46" column="27" selection-start="1348" selection-end="1348" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="34" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Velocity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="18" selection-start="616" selection-end="616" vertical-scroll-proportion="0.42092457">
+          <folding />
         </state>
       </provider>
     </entry>

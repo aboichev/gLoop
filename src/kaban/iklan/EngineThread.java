@@ -17,6 +17,7 @@ public class EngineThread extends Thread {
 
     // flag to hold game state
     private boolean running;
+    private boolean isPaused;
     private GameInfo gameInfo;
 
     private SurfaceHolder surfaceHolder;
@@ -29,14 +30,23 @@ public class EngineThread extends Thread {
         this.gameInfo = gameInfo;
     }
 
-    public void startLoop() {
+    @Override
+    public void start() {
         this.running = true;
-        this.start();
+        super.start();
+    }
+
+    public boolean isLoopRunning() {
+       return !isPaused;
     }
 
     public void pauseLoop()
     {
-        this.running = false;
+        this.isPaused = true;
+    }
+
+    public void resumeLoop(){
+        this.isPaused = false;
     }
 
     public void stopLoop() {
@@ -45,7 +55,7 @@ public class EngineThread extends Thread {
         boolean retry = true;
         while (retry) {
             try {
-                this.join();
+                this.join(100);
                 retry = false;
             } catch (InterruptedException e) {
                 // try again shutting down the thread
@@ -61,11 +71,10 @@ public class EngineThread extends Thread {
         Log.d(TAG, "Starting game loop");
 
         long beginTime;		// the time when the cycle begun
-        long timeDiff;		// the time it took for the cycle to execute
-        int sleepTime;		// ms to sleep (<0 if we're behind)
+        long timeDiff = 0;		// the time it took for the cycle to execute
+        int sleepTime = 0;		// ms to sleep (<0 if we're behind)
         int framesSkipped;	// number of frames being skipped
 
-        sleepTime = 0;
 
         while (running) {
 
@@ -79,9 +88,19 @@ public class EngineThread extends Thread {
                     beginTime = System.currentTimeMillis();
                     framesSkipped = 0;	// resetting the frames skipped
 
-                    // update state
-                    this.gamePanel.update();
-                    // draws
+                    if(!isPaused){
+                    // / update state
+                    this.gamePanel.update(timeDiff);
+                    }
+                    else { // paused
+                        try {
+                            Thread.sleep(sleepTime);
+                        }  catch (InterruptedException e) {}
+                        // draws after some sleep without updating stats
+                        this.gamePanel.render(canvas);
+                        continue;
+                    }
+                    // draw
                     this.gamePanel.render(canvas);
 
                     // calculate sleep time
@@ -96,7 +115,7 @@ public class EngineThread extends Thread {
 
                     while (sleepTime < 0 && framesSkipped < MAX_FRAME_SKIPS) {
                         // update without rendering
-                        this.gamePanel.update();
+                        this.gamePanel.update(timeDiff);
                         // add frame period to check if in next frame
                         sleepTime += FRAME_PERIOD;
                         framesSkipped++;
