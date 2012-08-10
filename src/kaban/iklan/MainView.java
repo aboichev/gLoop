@@ -43,7 +43,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
     public void surfaceCreated(SurfaceHolder holder) {
 
         velocity.setDir(290);
-        velocity.setSpeed(1.2f);
+        velocity.setSpeed(3.2f);
         ball.setX(400);
         ball.setY(400);
 
@@ -78,26 +78,38 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
     protected void update(long time) {
 
+        bounceOffWall();
+        ball.updatePos(velocity, time);
+    }
+
+    private void bounceOffWall() {
+
+        // top wall
         if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top) &&
-                !canvasRect.contains(ball.getBounds().right, ball.getBounds().top)) {
+           !canvasRect.contains(ball.getBounds().right, ball.getBounds().top)) {
             velocity.reverseY();
+            return;
         }
 
+        // bottom wall
         if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom) &&
-                !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
+           !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
             velocity.reverseY();
+            return;
         }
 
+        // left wall
         if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top)  &&
             !canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom)) {
             velocity.reverseX();
+            return;
         }
+        // right wall
         if(!canvasRect.contains(ball.getBounds().right, ball.getBounds().top)  &&
-                !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
+            !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
             velocity.reverseX();
+            return;
         }
-
-        ball.updatePos(velocity, time);
     }
 
     private Paint paint = new Paint();
@@ -114,9 +126,10 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
         // draw info bar
         paint.setColor(Color.BLACK);
         paint.setTextSize(20);
-        canvas.drawText("Angle: " + velocity.getAngle() +
-                        " Frame: " + gameInfo.getTotalFrames() +
+        canvas.drawText(" xVel: " + velocity.getVelX() + " yVel: " + velocity.getVelY() +
+                        " Frames: " + gameInfo.getTotalFrames() +
                         " FPS: "  + decimalFormat.format(gameInfo.getAverageFps()) +
-                        " Skipped: " + gameInfo.getAvgFramesSkipped(), 10, 30, paint);
+                        " Skipped: " + gameInfo.getAvgFramesSkipped()  +
+                        " " + gameInfo.getMessage(), 10, 30, paint);
     }
 }

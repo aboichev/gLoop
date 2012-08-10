@@ -5,10 +5,10 @@ public class Velocity {
     private int angle;
     private float speed;
 
-    private int velX;
-    private int velY;
+    private float velX;
+    private float velY;
 
-    public int getVelX(){
+    public float getVelX(){
        return velX;
     }
 
@@ -16,7 +16,7 @@ public class Velocity {
         return angle;
     }
 
-    public int getVelY(){
+    public float getVelY(){
        return velY;
     }
 
@@ -39,7 +39,7 @@ public class Velocity {
     }
 
     private void update() {
-        velX = -(int) (speed * Math.cos(Math.toRadians(angle)));
-        velY = (int) (speed * Math.sin(Math.toRadians(angle)));
+        velX = (float) - (speed * Math.cos(Math.toRadians(angle)));
+        velY = (float)  (speed * Math.sin(Math.toRadians(angle)));
     }
 }

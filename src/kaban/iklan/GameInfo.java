@@ -26,6 +26,8 @@ class GameInfo {
     // the status time counter
     private long statusIntervalTimer = 0l;
 
+    private String message = "";
+
 
     // public methods
     public long getTotalFrames() {
@@ -38,6 +40,14 @@ class GameInfo {
 
     public double getAverageFps(){
         return averageFps;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public String getMessage() {
+        return this.message;
     }
 
     public void update(int framesSkipped) {

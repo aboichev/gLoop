@@ -37,15 +37,14 @@ public class EngineThread extends Thread {
     }
 
     public boolean isLoopRunning() {
-       return !isPaused;
+        return !isPaused;
     }
 
-    public void pauseLoop()
-    {
+    public void pauseLoop() {
         this.isPaused = true;
     }
 
-    public void resumeLoop(){
+    public void resumeLoop() {
         this.isPaused = false;
     }
 
@@ -55,7 +54,7 @@ public class EngineThread extends Thread {
         boolean retry = true;
         while (retry) {
             try {
-                this.join(100);
+                this.join();
                 retry = false;
             } catch (InterruptedException e) {
                 // try again shutting down the thread
@@ -72,9 +71,8 @@ public class EngineThread extends Thread {
 
         long beginTime;		// the time when the cycle begun
         long timeDiff = 0;		// the time it took for the cycle to execute
-        int sleepTime = 0;		// ms to sleep (<0 if we're behind)
+        int sleepTime;		// ms to sleep (<0 if we're behind)
         int framesSkipped;	// number of frames being skipped
-
 
         while (running) {
 
@@ -88,21 +86,22 @@ public class EngineThread extends Thread {
                     beginTime = System.currentTimeMillis();
                     framesSkipped = 0;	// resetting the frames skipped
 
-                    if(!isPaused){
-                    // / update state
-                    this.gamePanel.update(timeDiff);
+                    if( !isPaused) {
+                        // update state
+                        this.gamePanel.update(timeDiff);
                     }
-                    else { // paused
-                        try {
-                            Thread.sleep(sleepTime);
-                        }  catch (InterruptedException e) {}
-                        // draws after some sleep without updating stats
+                    else  {
+                        // render a paused state and sleep.
                         this.gamePanel.render(canvas);
+                        try {
+                            Thread.sleep(1000);
+                        } catch (InterruptedException e) {}
                         continue;
                     }
-                    // draw
-                    this.gamePanel.render(canvas);
 
+                    // draws
+                    this.gamePanel.render(canvas);
+                }
                     // calculate sleep time
                     timeDiff = System.currentTimeMillis() - beginTime;
                     sleepTime = (int)(FRAME_PERIOD - timeDiff);
@@ -112,7 +111,6 @@ public class EngineThread extends Thread {
                         } catch (InterruptedException e) {}
                     }
 
-
                     while (sleepTime < 0 && framesSkipped < MAX_FRAME_SKIPS) {
                         // update without rendering
                         this.gamePanel.update(timeDiff);
@@ -120,7 +118,7 @@ public class EngineThread extends Thread {
                         sleepTime += FRAME_PERIOD;
                         framesSkipped++;
                     }
-                }
+
                 // update frames stats
                 gameInfo.update(framesSkipped);
             } finally {
@@ -130,6 +128,8 @@ public class EngineThread extends Thread {
                     surfaceHolder.unlockCanvasAndPost(canvas);
                 }
             } // end finally
+
+            Log.d(TAG, " timeDiff = " + timeDiff);
         }
         Log.d(TAG, "Game loop drawn " + gameInfo.getTotalFrames() + " frames");
     }
