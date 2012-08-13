@@ -42,8 +42,8 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
 
-        velocity.setDir(290);
-        velocity.setSpeed(3.2f);
+        velocity.setDir(320);
+        velocity.setSpeed(3f);
         ball.setX(400);
         ball.setY(400);
 
@@ -78,39 +78,38 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
     protected void update(long time) {
 
-        bounceOffWall();
-        ball.updatePos(velocity, time);
+        ball.updatePos(velocity, time, this.getWidth(), this.getHeight());
     }
 
-    private void bounceOffWall() {
-
-        // top wall
-        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top) &&
-           !canvasRect.contains(ball.getBounds().right, ball.getBounds().top)) {
-            velocity.reverseY();
-            return;
-        }
-
-        // bottom wall
-        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom) &&
-           !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
-            velocity.reverseY();
-            return;
-        }
-
-        // left wall
-        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top)  &&
-            !canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom)) {
-            velocity.reverseX();
-            return;
-        }
-        // right wall
-        if(!canvasRect.contains(ball.getBounds().right, ball.getBounds().top)  &&
-            !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
-            velocity.reverseX();
-            return;
-        }
-    }
+//    private void bounceOffWall() {
+//
+//		// top wall
+//		if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top) &&
+//		   !canvasRect.contains(ball.getBounds().right, ball.getBounds().top)) {
+//			velocity.reverseY();
+//			return;
+//		}
+//
+//        // bottom wall
+//        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom) &&
+//           !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
+//            velocity.reverseY();
+//            return;
+//        }
+//
+//        // left wall
+//        if(!canvasRect.contains(ball.getBounds().left, ball.getBounds().top)  &&
+//            !canvasRect.contains(ball.getBounds().left, ball.getBounds().bottom)) {
+//            velocity.reverseX();
+//            return;
+//        }
+//        // right wall
+//        if(!canvasRect.contains(ball.getBounds().right, ball.getBounds().top)  &&
+//            !canvasRect.contains(ball.getBounds().right, ball.getBounds().bottom)) {
+//            velocity.reverseX();
+//            return;
+//        }
+//    }
 
     private Paint paint = new Paint();
     protected void render(Canvas canvas) {
@@ -126,8 +125,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
         // draw info bar
         paint.setColor(Color.BLACK);
         paint.setTextSize(20);
-        canvas.drawText(" xVel: " + velocity.getVelX() + " yVel: " + velocity.getVelY() +
-                        " Frames: " + gameInfo.getTotalFrames() +
+        canvas.drawText(" Frames: " + gameInfo.getTotalFrames() +
                         " FPS: "  + decimalFormat.format(gameInfo.getAverageFps()) +
                         " Skipped: " + gameInfo.getAvgFramesSkipped()  +
                         " " + gameInfo.getMessage(), 10, 30, paint);

@@ -9,7 +9,7 @@ public class EngineThread extends Thread {
     private static final String TAG = EngineThread.class.getName();
 
     // desired fps
-    private final static int 	MAX_FPS = 50;
+    private final static int 	MAX_FPS = 25;
     // maximum number of frames to be skipped
     private final static int	MAX_FRAME_SKIPS = 5;
     // the frame period
@@ -80,11 +80,12 @@ public class EngineThread extends Thread {
 
             // try locking the canvas for exclusive pixel editing on the surface
             try {
+
+                beginTime = System.currentTimeMillis();
+                framesSkipped = 0;	// resetting the frames skipped
+
                 canvas = this.surfaceHolder.lockCanvas();
                 synchronized (surfaceHolder) {
-
-                    beginTime = System.currentTimeMillis();
-                    framesSkipped = 0;	// resetting the frames skipped
 
                     if( !isPaused) {
                         // update state
@@ -98,29 +99,30 @@ public class EngineThread extends Thread {
                         } catch (InterruptedException e) {}
                         continue;
                     }
-
                     // draws
                     this.gamePanel.render(canvas);
                 }
-                    // calculate sleep time
-                    timeDiff = System.currentTimeMillis() - beginTime;
-                    sleepTime = (int)(FRAME_PERIOD - timeDiff);
-                    if (sleepTime > 0) {
-                        try {
-                            Thread.sleep(sleepTime);
-                        } catch (InterruptedException e) {}
-                    }
+                // calculate sleep time
+                timeDiff = System.currentTimeMillis() - beginTime;
+                sleepTime = (int)(FRAME_PERIOD - timeDiff);
+                if (sleepTime > 0) {
+                    try {
+                        Thread.sleep(sleepTime);
+                    } catch (InterruptedException e) {}
+                }
 
-                    while (sleepTime < 0 && framesSkipped < MAX_FRAME_SKIPS) {
-                        // update without rendering
-                        this.gamePanel.update(timeDiff);
-                        // add frame period to check if in next frame
-                        sleepTime += FRAME_PERIOD;
-                        framesSkipped++;
-                    }
-
+//                while (sleepTime <= 0 && framesSkipped < MAX_FRAME_SKIPS) {
+//                    // update without rendering
+//                    beginTime = System.currentTimeMillis();
+//                    this.gamePanel.update(timeDiff);
+//                    // add frame period to check if in next frame
+//                    sleepTime += FRAME_PERIOD;
+//                    framesSkipped++;
+//                    timeDiff = System.currentTimeMillis() - beginTime;
+//                }
                 // update frames stats
                 gameInfo.update(framesSkipped);
+                Log.d(TAG, " timeDiff = " + timeDiff);
             } finally {
                 // in case of an exception the surface is not left in
                 // an inconsistent state
@@ -128,8 +130,6 @@ public class EngineThread extends Thread {
                     surfaceHolder.unlockCanvasAndPost(canvas);
                 }
             } // end finally
-
-            Log.d(TAG, " timeDiff = " + timeDiff);
         }
         Log.d(TAG, "Game loop drawn " + gameInfo.getTotalFrames() + " frames");
     }

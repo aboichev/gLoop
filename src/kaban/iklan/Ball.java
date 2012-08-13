@@ -37,12 +37,65 @@ public class Ball {
         this.y = yPox;
     }
 
-    public void updatePos(Velocity velocity, long time) {
+    public void updatePos(Velocity velocity, long time, int width, int height) {
 
-        this.x += velocity.getVelX() * time;
-        this.y += velocity.getVelY() * time;
-        Log.d(TAG, "velX=" + velocity.getVelX() + " velY=" + velocity.getVelY() +
-                    " time=" + time);
+        if(time == 0){
+            return;
+        }
+
+        float velX = velocity.getX();
+        float velY = velocity.getY();
+
+        double straitLinePosX = this.x + (velX * time);
+        double straitLinePosY = this.y + (velY * time);
+
+        while( straitLinePosX < 0 || straitLinePosY < 0 || straitLinePosX > width || straitLinePosY > height )
+        {
+            if( straitLinePosX > 1000000 || straitLinePosY > 100000){
+                return;
+            }
+            double hitPosRatio;
+            double hitPosX;
+            double hitPosY;
+
+            double newPosX;
+            double newPosY;
+
+            if( straitLinePosX - width >= straitLinePosY - height) {
+                // x-axis hit
+                hitPosX = width;
+                hitPosRatio = hitPosX / straitLinePosX;
+                hitPosY = straitLinePosY * hitPosRatio;
+                velX = -velX;
+                newPosX = straitLinePosX - width;
+                newPosY = hitPosY;
+            }
+            else {
+                // y-axis hit
+                hitPosY = height;
+                hitPosRatio = hitPosY / straitLinePosY;
+                hitPosX = straitLinePosX * hitPosRatio;
+                velY = -velY;
+                newPosX = hitPosX;
+                newPosY = straitLinePosY - height;
+            }
+
+            straitLinePosX = newPosX;
+            straitLinePosY = newPosY;
+
+            velocity.setX(velX);
+            velocity.setY(velY);
+
+            Log.d(TAG, "straitLinePosX = " + straitLinePosX + " straitLinePosY = " + straitLinePosY +
+                    " time = " + time + " newPosX = " + newPosX + " newPosY = " + newPosY);
+        }
+
+        this.x = (int)Math.round(straitLinePosX);
+        this.y = (int)Math.round(straitLinePosY);
+
+        Log.d(TAG, "velX = " + velocity.getX() + " velY = " + velocity.getY() +
+                    " time = " + time + " x = " + this.x + " y = " + this.y);
+
     }
 
     public void draw(Canvas canvas) {
