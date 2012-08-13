@@ -18,15 +18,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dbbdbf-17ed-4fa2-8c09-200c8bd053e0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/classes.dex" afterPath="$PROJECT_DIR$/out/production/gLoop/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.unaligned" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk" afterPath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Ball.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Ball.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/EngineThread.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/EngineThread.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/GameInfo.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/GameInfo.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainView.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainView.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Velocity.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Velocity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="gLoop.iws" />
@@ -495,7 +486,11 @@
       <created>1344825420811</created>
       <updated>1344825420811</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="experiment with collision detection base on time.">
+      <created>1344825515933</created>
+      <updated>1344825515933</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
