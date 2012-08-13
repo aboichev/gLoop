@@ -18,12 +18,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61dbbdbf-17ed-4fa2-8c09-200c8bd053e0" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/classes.dex" afterPath="$PROJECT_DIR$/out/production/gLoop/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.unaligned" afterPath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk.unaligned" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk" afterPath="$PROJECT_DIR$/out/production/gLoop/gLoop.apk" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Ball.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Ball.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/EngineThread.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/EngineThread.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/GameInfo.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/GameInfo.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainView.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/MainView.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Velocity.class" afterPath="$PROJECT_DIR$/out/production/gLoop/kaban/iklan/Velocity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gen/kaban/iklan/BuildConfig.java" afterPath="$PROJECT_DIR$/gen/kaban/iklan/BuildConfig.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/Ball.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/Ball.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/MainView.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/MainView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" afterPath="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" />
     </list>
     <ignored path="gLoop.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -90,13 +94,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ball.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Ball.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="54" selection-start="824" selection-end="824" vertical-scroll-proportion="0.3030303">
+            <state line="43" column="54" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="6" selection-start="392" selection-end="392" vertical-scroll-proportion="0.6944444">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -157,12 +170,12 @@
         <option value="$PROJECT_DIR$/res/drawable-mdpi/ball.xml" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/GameEntity.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/MainActivity.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/GameInfo.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/Velocity.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/MainView.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/EngineThread.java" />
         <option value="$PROJECT_DIR$/src/kaban/iklan/Ball.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -213,20 +226,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="gLoop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gLoop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="gLoop" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,7 +491,11 @@
       <created>1344575424873</created>
       <updated>1344575424873</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="experiment with collision detection base on time.">
+      <created>1344825420811</created>
+      <updated>1344825420811</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -580,7 +583,7 @@
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pause and time based position" />
+    <option name="LAST_COMMIT_MESSAGE" value="experiment with collision detection base on time." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -597,6 +600,7 @@
     <MESSAGE value="divide by zero bug fixed" />
     <MESSAGE value="added wall collisions logic" />
     <MESSAGE value="added pause and time based position" />
+    <MESSAGE value="experiment with collision detection base on time." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -629,11 +633,6 @@
     <entry file="file://$PROJECT_DIR$/project.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="6" selection-start="385" selection-end="385" vertical-scroll-proportion="0.6490909" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
@@ -693,10 +692,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/kaban/iklan/Ball.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="54" selection-start="824" selection-end="824" vertical-scroll-proportion="0.3030303">
+        <state line="43" column="54" selection-start="824" selection-end="824" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="6" selection-start="392" selection-end="392" vertical-scroll-proportion="0.6944444">
+          <folding />
         </state>
       </provider>
     </entry>

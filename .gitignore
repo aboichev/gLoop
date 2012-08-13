@@ -31,7 +31,8 @@ local.properties
  #################
  ## IntelliJ
  #################
- .idea
+ .idea/
+ gen/
 
 #################
 ## Visual Studio
