@@ -128,16 +128,16 @@ public class EngineThread extends Thread {
                 } catch (InterruptedException e) {}
             }
 
-            while (sleepTime <= 0 && framesSkipped < MAX_FRAME_SKIPS) {
-                // update without rendering
-                beginTime = System.currentTimeMillis();
-                Log.d(TAG, "Updating game state. Frame skipped. timeDiff = " + timeDiff);
-                this.gamePanel.update(timeDiff);
-                // add frame period to check if in next frame
-                sleepTime += FRAME_PERIOD;
-                framesSkipped++;
-                timeDiff = System.currentTimeMillis() - beginTime;
-            }
+//            while (sleepTime <= 0 && framesSkipped < MAX_FRAME_SKIPS) {
+//                // update without rendering
+//                beginTime = System.currentTimeMillis();
+//                Log.d(TAG, "Updating game state. Frame skipped. timeDiff = " + timeDiff);
+//                this.gamePanel.update(timeDiff);
+//                // add frame period to check if in next frame
+//                sleepTime += FRAME_PERIOD;
+//                framesSkipped++;
+//                timeDiff = System.currentTimeMillis() - beginTime;
+//            }
             // update frames stats
             gameInfo.update(framesSkipped);
         }
