@@ -2,31 +2,31 @@ package kaban.iklan;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
-import android.graphics.Rect;
+import android.graphics.RectF;
 import android.util.Log;
 
 public class Ball {
 
     private static final String TAG = Ball.class.getName();
 
-    private int x;
-    private int y;
+    private double x;
+    private double y;
     private Bitmap ball;
 
     public Ball(Bitmap bitmap) {
         this.ball = bitmap;
     }
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public Rect getBounds(){
-        return new Rect(x, y, x + ball.getWidth(), y + ball.getHeight());
+    public RectF getBounds(){
+        return new RectF((float)x, (float)y, (float) (x + ball.getWidth()), (float)(y + ball.getHeight()));
     }
 
     public void setX(int xPox) {
@@ -39,66 +39,127 @@ public class Ball {
 
     public void updatePos(Velocity velocity, long time, int width, int height) {
 
-        if(time == 0){
+        if(time == 0) {
             return;
         }
 
         float velX = velocity.getX();
         float velY = velocity.getY();
 
-        double straitLinePosX = this.x + (velX * time);
-        double straitLinePosY = this.y + (velY * time);
+        width = width - ball.getWidth();
+        height = height - ball.getHeight();
 
-        while( straitLinePosX < 0 || straitLinePosY < 0 || straitLinePosX > width || straitLinePosY > height )
+        double distX = this.x + (velX * time);
+        double distY = this.y + (velY * time);
+
+        while( distX < 0 || distY < 0 || distX > width || distY > height )
         {
-            if( straitLinePosX > 1000000 || straitLinePosY > 100000){
-                return;
+            Log.d(TAG, "before update: distX = " + distX + " distY = " + distY + " time = " + time );
+            // if both distX and distY off-screen to the right and bottom
+            if( distX > width && distY > height) {
+
+                if( distX - width > distY - height) {
+                    // x-axis hit first
+                    velX = -velX;
+                    distX = width - (distX - width);
+                }
+                else {
+                    // y-axis hit first
+                    velY = -velY;
+                    distY = height - (distY - height);
+                }
+                continue;
             }
-            double hitPosRatio;
-            double hitPosX;
-            double hitPosY;
 
-            double newPosX;
-            double newPosY;
+            // if both distX and distY off-screen to the right and top
+            if( distX > width && distY < 0) {
 
-            if( straitLinePosX - width >= straitLinePosY - height) {
-                // x-axis hit
-                hitPosX = width;
-                hitPosRatio = hitPosX / straitLinePosX;
-                hitPosY = straitLinePosY * hitPosRatio;
+                if( distX - width > - distY) {
+                    // x-axis hit first
+                    velX = -velX;
+                    distX = width - (distX - width);
+                }
+                else {
+                    // y-axis hit first
+                    velY = -velY;
+                    distY = -distY;
+                }
+                continue;
+            }
+
+            // if both distX and distY off-screen to the left and top
+            if( distX < 0 && distY < 0) {
+
+                if( distX > distY) {
+                    // x-axis hit first
+                    velX = -velX;
+                    distX = -distX;
+                }
+                else {
+                    // y-axis hit first
+                    velY = -velY;
+                    distY = -distY;
+                }
+                continue;
+            }
+
+            // if both distX and distY off-screen to the left and bottom
+            if( distX < 0 && distY > height) {
+
+                if( -distX > distY - height) {
+                    // x-axis hit first
+                    velX = -velX;
+                    distX = -distX;
+                }
+                else {
+                    // y-axis hit first
+                    velY = -velY;
+                    distY = height - (distY - height);
+                }
+                continue;
+            }
+
+            if( distX > width) {
+                // off-screen to the right
                 velX = -velX;
-                newPosX = straitLinePosX - width;
-                newPosY = hitPosY;
+                distX = width - (distX - width);
+                continue;
             }
-            else {
-                // y-axis hit
-                hitPosY = height;
-                hitPosRatio = hitPosY / straitLinePosY;
-                hitPosX = straitLinePosX * hitPosRatio;
+
+            if( distX < 0) {
+                // off-screen to the left
+                velX = -velX;
+                distX = -distX;
+                continue;
+            }
+
+            if( distY > height) {
+                // off-screen to the bottom;
                 velY = -velY;
-                newPosX = hitPosX;
-                newPosY = straitLinePosY - height;
+                distY = height - (distY - height);
+                continue;
             }
 
-            straitLinePosX = newPosX;
-            straitLinePosY = newPosY;
-
-            velocity.setX(velX);
-            velocity.setY(velY);
-
-            Log.d(TAG, "straitLinePosX = " + straitLinePosX + " straitLinePosY = " + straitLinePosY +
-                    " time = " + time + " newPosX = " + newPosX + " newPosY = " + newPosY);
+            if( distY < 0) {
+                // off-screen to the top;
+                velY = -velY;
+                distY = -distY;
+                continue;
+            }
         }
 
-        this.x = (int)Math.round(straitLinePosX);
-        this.y = (int)Math.round(straitLinePosY);
+        velocity.setX(velX);
+        velocity.setY(velY);
 
-        Log.d(TAG, "velX = " + velocity.getX() + " velY = " + velocity.getY() +
-                    " time = " + time + " x = " + this.x + " y = " + this.y);
+        this.x = distX;
+        this.y = distY;
+
+        Log.d(TAG, "after update: distX = " + distX + " distY = " + distY);
+        Log.d(TAG, "velX = " + velocity.getX() + " velY = " + velocity.getY());
 
     }
 
     public void draw(Canvas canvas) {
-        canvas.drawBitmap( ball, x, y, null);
+        canvas.drawBitmap( ball, (int) Math.round(this.x), (int) Math.round(this.y), null);
     }
 }

@@ -33,6 +33,7 @@ local.properties
  #################
  .idea/
  gen/
+ out/
 
 #################
 ## Visual Studio
