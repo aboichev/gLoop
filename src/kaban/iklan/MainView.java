@@ -45,7 +45,7 @@ public class MainView extends SurfaceView implements SurfaceHolder.Callback {
 
         fontSize = this.getWidth() / 26;
         velocity.setDir(340);
-        velocity.setSpeed(this.getWidth() / 600);
+        velocity.setSpeed(this.getWidth() / (ball.getBounds().width() * 6));
         ball.setX(400);
         ball.setY(400);
 

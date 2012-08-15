@@ -9,7 +9,7 @@ public class EngineThread extends Thread {
     private static final String TAG = EngineThread.class.getName();
 
     // desired fps
-    private final static int 	MAX_FPS = 25;
+    private final static int 	MAX_FPS = 30;
     // maximum number of frames to be skipped
     private final static int	MAX_FRAME_SKIPS = 5;
     // the frame period
